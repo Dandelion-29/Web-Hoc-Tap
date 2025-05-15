@@ -12,27 +12,16 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Căn trái toàn bộ */
+  align-items: center;
   justify-content: start;
-  max-width: 600px;
-  margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   background-color: transparent;
 }
-#ten {
-  color: black;
-  text-transform: uppercase;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  position: absolute;
-  top: 500px;
-  left: 600px;
-  font-weight: bold;
-}
+
 h1 {
   text-transform: uppercase;
   margin-bottom: 15px;
-  font-size: 32px;
+  font-size: 5vw; /* linh hoạt theo chiều rộng */
   color: #2e2e2e;
   text-align: center;
   width: 100%;
@@ -40,19 +29,19 @@ h1 {
 
 .box {
   display: grid;
-  grid-template-columns: repeat(10, 70px); /* 10 nút mỗi hàng */
-  justify-content: start;
-  position: absolute;
-  left: 200px;
-  top: 200px;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 15px;
+  padding: 10px;
+  width: 100%;
+  max-width: 800px;
+  justify-items: center;
 }
 
 button {
   background-color: #f2d6c3;
-  width: 70px;
-  height: 70px;
-  font-size: 20px;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
   text-transform: uppercase;
   border: 2px solid #333;
   border-radius: 10px;
@@ -64,4 +53,14 @@ button {
 button:hover {
   background-color: rgb(202, 168, 129);
   transform: scale(1.05);
+}
+
+#ten {
+  color: black;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 14px;
 }
